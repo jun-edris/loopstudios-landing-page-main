@@ -29,6 +29,7 @@ header {
 header {
     display: flex;
     flex-direction: column;
+    margin-bottom: 10em;
 }
 
 header .navigation_container {
@@ -80,7 +81,39 @@ header .navigation_container {
     margin: 0;
 }
 
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
 
+.container .info_container {
+    position: relative;
+}
+
+.inner_info_container {
+    position: absolute;
+    background-color: var(--primary-White);
+    max-width: 415px;
+    right: -95px;
+    bottom: -85px;
+    padding: 5rem;
+    margin: 2rem 2rem 0 2rem;
+}
+
+.inner_info_container .info_para_header {
+    font-family: 'Josefin Sans';
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 250;
+}
+
+.inner_info_container .info_para_para {
+    font-family: 'Josefin Sans';
+    font-size: 15px;
+    line-height: 1.5rem;
+    max-width: 415px;
+}
 
 
 
