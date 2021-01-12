@@ -7,6 +7,7 @@
     --primary-Dark-Gray: hsl(0, 0%, 55%);
     --primary-VeryDarkGray: hsl(0, 0%, 41%);
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -115,11 +116,176 @@ header .navigation_container {
     max-width: 415px;
 }
 
+main {
+    margin-bottom: 10rem;
+}
 
+.collection {
+    margin-top: 10rem;
+    box-sizing: border-box;
+}
 
+.collection_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5.5em;
+}
 
+.collection_header h3{
+    font-family: 'Josefin Sans';
+    font-size: 2.5rem;
+    font-weight: 250;
+}
 
+.collection_header button {
+    background-color: var(--primary-White);
+    font-family: 'Alata';
+    font-size: 1rem;
+    padding: 7px 35px;
+    margin: 0;
+    letter-spacing: 2.5px;
+    border: 2px solid var(--primary-VeryDarkGray);
+    border-radius: 2px;
+}
 
+.collections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.collections .collections_img {
+    margin-bottom: 25px;
+}
+
+.collections .collections_img_1 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.514), rgba(184, 184, 184, 0)), url('./images/desktop/image-deep-earth.jpg');
+    width: 256px;
+    height: 450px;
+    position: relative;
+}
+.collections .collections_img_2 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.514), rgba(184, 184, 184, 0)), url('./images/desktop/image-night-arcade.jpg');
+    width: 256px;
+    height: 450px;
+    position: relative;
+}
+
+.collections .collections_img_3 {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.514), rgba(184, 184, 184, 0)), url('./images/desktop/image-soccer-team.jpg');
+    width: 256px;
+    height: 450px;
+    position: relative;
+}
+
+.collections .collections_img_4 {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.514),rgba(184, 184, 184, 0)), url('./images/desktop/image-grid.jpg');
+    width: 256px;
+    height: 450px;
+    position: relative;
+}
+
+.collections .collections_img_5 {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.514),rgba(184, 184, 184, 0)), url('./images/desktop/image-from-above.jpg');
+    width: 256px;
+    height: 450px;
+    position: relative;
+}
+
+.collections .collections_img_6 {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.514),rgba(184, 184, 184, 0)), url('./images/desktop/image-pocket-borealis.jpg');
+    width: 256px;
+    height: 450px;
+    position: relative;
+}
+
+.collections .collections_img_7 {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.514),rgba(184, 184, 184, 0)), url('./images/desktop/image-curiosity.jpg');
+    width: 256px;
+    height: 450px;
+    position: relative;
+}
+
+.collections .collections_img_8 {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.514),rgba(184, 184, 184, 0)), url('./images/desktop/image-fisheye.jpg');
+    width: 256px;
+    height: 450px;
+    position: relative;
+}
+
+.collections h3 {
+    font-family: 'Josefin Sans';
+    font-weight: 250;
+    max-width: 150px;
+    font-size: 1.5rem;
+    color: var(--primary-White);
+    margin: 2rem;
+    position: absolute;
+    bottom: 5px;
+}
+
+footer {
+    background-color:  var(--primary-Black);
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0 2rem 0;
+    justify-content: space-between;
+}
+
+footer .footer_links {
+    
+}
+
+footer .footer_links ul {
+    list-style: none;
+    display: flex;
+    margin: 1.5rem 0 0 0;
+    box-sizing: border-box;
+}
+
+footer .footer_links ul li {
+    margin-right: 2rem;
+}
+
+footer .footer_links ul li a{
+    text-decoration: none;
+    font-family: 'Alata';
+    color: var(--primary-White);
+}
+
+footer .social ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 1.5rem 0;
+    box-sizing: border-box;
+}
+
+footer .social ul li {
+    margin-right: 1.5rem;
+}
+
+footer .copyright {
+    color: var(--primary-VeryDarkGray);
+}
+
+.attribution {
+    font-family: 'Josefin Sans';
+    font-size: 0.9rem;
+    text-align: center;
+    color: var(--primary-White);
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
 
 
 
@@ -129,7 +295,17 @@ header .navigation_container {
 
 /* with pseudo */
 .navigation_links ul li:nth-child(5) {
-    display: flex;
-    align-items: center;
+    margin-right: 0;
+}
+
+.collections .collections_img:nth-child(n+5) {
+    margin-bottom: 0;
+}
+
+footer .footer_links ul li:nth-child(5) {
+    margin-right: 0;
+}
+
+footer .social ul li:nth-child(4) {
     margin-right: 0;
 }
