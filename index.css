@@ -1,1 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+:root {
+    --primary-White: hsl(0, 0%, 100%);
+    --primary-Black: hsl(0, 0%, 0%);
+    --primary-Dark-Gray: hsl(0, 0%, 55%);
+    --primary-VeryDarkGray: hsl(0, 0%, 41%);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+header {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.473), rgba(0, 0, 0, 0.473)), url('images/desktop/image-hero.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+header .navigation_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin: 4.4em auto 8.5em auto;
+    width: 80%;
+}
+
+.navigation_container .navigation_links ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    box-sizing: border-box;
+    
+}
+
+.navigation_links ul li {
+    display: flex;
+    align-items: center;
+    margin-right: 1.85em;
+}
+
+.navigation_links ul li a{
+    font-family: 'Alata';
+    text-decoration: none;
+    color: var(--primary-White);
+}
+
+.header_title {
+    width: 80%;
+    margin: 0 auto 10rem auto;
+}
+
+.header_title div{
+    float: left;
+    border: 2.5px solid var(--primary-White);
+    max-width: 570px;
+    padding: 30px;
+}
+
+.header_title div h1 {
+    font-family: 'Josefin Sans';
+    color: var(--primary-White);
+    font-size: 4.5rem;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* with pseudo */
+.navigation_links ul li:nth-child(5) {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+}
