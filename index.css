@@ -78,6 +78,10 @@ header .navigation_container {
     font-family: 'Alata';
     text-decoration: none;
     color: var(--primary-White);
+    transition: .5s ease;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 10px;
 }
 
 .header_title {
@@ -160,12 +164,20 @@ main .container {
 .collection button {
     background-color: var(--primary-White);
     font-family: 'Alata';
-    font-size: 1rem;
+    font-size: 0.7rem;
     padding: 7px 35px;
     margin: 0;
     letter-spacing: 2.5px;
     border: 2px solid var(--primary-VeryDarkGray);
     border-radius: 2px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    max-width: 145px;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s ease;
 }
 
 .collection .lower_btn {
@@ -319,6 +331,10 @@ footer .footer_links ul li a{
     text-decoration: none;
     font-family: 'Alata';
     color: var(--primary-White);
+    transition: .5s ease;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 10px;
 }
 
 footer .social ul {
@@ -331,13 +347,18 @@ footer .social ul {
 
 footer .social ul li {
     margin-right: 1rem;
+    transition: .5s ease;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+    cursor: pointer;
 }
 
 footer .copyright {
     color: var(--primary-VeryDarkGray);
     font-family: 'Alata';
     font-weight: bold;
-    font-size: 15px;
+    font-size: clamp(13px, 2.5vw, 15px);
 }
 
 .attribution {
@@ -357,6 +378,9 @@ footer .copyright {
 
 
 
+
+
+
 /* with pseudo */
 .navigation_links ul li:nth-child(5), footer .footer_links ul li:nth-child(5) {
     margin-right: 0;
@@ -369,6 +393,49 @@ footer .copyright {
 footer .social ul li:nth-child(4) {
     margin-right: 0;
 }
+
+.navigation_links ul li a::after, footer .footer_links ul li a::after, footer .social ul li::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    border-radius: 2px;
+}
+
+.navigation_links ul li a:hover:after, footer .footer_links ul li a:hover::after, footer .social ul li:hover::after { 
+    width: 100%; 
+    left: 0; 
+}
+
+.collection .upper_btn:hover {
+    color: var(--primary-White);
+    background-color: var(--primary-Black);
+    border: 0;
+}
+
+.collection .lower_btn:hover {
+    color: var(--primary-White);
+    background-color: var(--primary-Black);
+    border: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Media Query */
 
@@ -502,7 +569,7 @@ footer .social ul li:nth-child(4) {
     }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 670px) {
     .collections {
         display: flex;
         flex-direction: column;
@@ -511,10 +578,10 @@ footer .social ul li:nth-child(4) {
         width: 100%;
     }
     
-    /* .collections .collections_img {
+    .collections .collections_img {
         margin-bottom: 23.3px;
-        margin-right: 23.3px;
-    } */
+        margin-right: 0;
+    }
     
     .collections .collections_img_1 {
         background: linear-gradient(90deg, rgba(2, 2, 2, 0.548),rgba(255, 255, 255, 0)), url('./images/mobile/image-deep-earth.jpg');
