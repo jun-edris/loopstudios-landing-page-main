@@ -30,7 +30,7 @@ header {
 header {
     display: flex;
     flex-direction: column;
-    margin-bottom: clamp(5em, 10vw, 10em);
+    margin-bottom: clamp(5.6em, 10vw, 10em);
 }
 
 .navigation {
@@ -137,7 +137,7 @@ main {
 }
 
 .collection {
-    margin-top: 10rem;
+    margin-top: clamp(2em, 10vw, 10em);
     box-sizing: border-box;
 }
 
@@ -151,10 +151,10 @@ main {
 .collection_header h3{
     font-family: 'Josefin Sans';
     font-size: 2.5rem;
-    font-weight: 250;
+    font-weight: 200;
 }
 
-.collection_header button {
+.collection button {
     background-color: var(--primary-White);
     font-family: 'Alata';
     font-size: 1rem;
@@ -165,26 +165,42 @@ main {
     border-radius: 2px;
 }
 
+.collection .lower_btn {
+    display: none;
+}
+
 .collections {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .collections .collections_img {
-    margin-bottom: 18px;
+    margin-bottom: 23.3px;
+    margin-right: 23.3px;
 }
 
 .collections .collections_img_1 {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.514), rgba(184, 184, 184, 0)), url('./images/desktop/image-deep-earth.jpg');
     width: 256px;
+    /* width: 23.4%; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 450px;
     position: relative;
 }
+
 .collections .collections_img_2 {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.514), rgba(184, 184, 184, 0)), url('./images/desktop/image-night-arcade.jpg');
     width: 256px;
+    /* width: 23.4%; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 450px;
     position: relative;
 }
@@ -192,6 +208,10 @@ main {
 .collections .collections_img_3 {
     background: linear-gradient(0deg,rgba(0, 0, 0, 0.514), rgba(184, 184, 184, 0)), url('./images/desktop/image-soccer-team.jpg');
     width: 256px;
+    /* width: 23.4%; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 450px;
     position: relative;
 }
@@ -199,6 +219,10 @@ main {
 .collections .collections_img_4 {
     background: linear-gradient(0deg,rgba(0, 0, 0, 0.514),rgba(184, 184, 184, 0)), url('./images/desktop/image-grid.jpg');
     width: 256px;
+    /* width: 23.4%; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 450px;
     position: relative;
 }
@@ -206,6 +230,10 @@ main {
 .collections .collections_img_5 {
     background: linear-gradient(0deg,rgba(0, 0, 0, 0.514),rgba(184, 184, 184, 0)), url('./images/desktop/image-from-above.jpg');
     width: 256px;
+    /* width: 23.4%; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 450px;
     position: relative;
 }
@@ -213,6 +241,10 @@ main {
 .collections .collections_img_6 {
     background: linear-gradient(0deg,rgba(0, 0, 0, 0.514),rgba(184, 184, 184, 0)), url('./images/desktop/image-pocket-borealis.jpg');
     width: 256px;
+    /* width: 23.4%; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 450px;
     position: relative;
 }
@@ -220,6 +252,10 @@ main {
 .collections .collections_img_7 {
     background: linear-gradient(0deg,rgba(0, 0, 0, 0.514),rgba(184, 184, 184, 0)), url('./images/desktop/image-curiosity.jpg');
     width: 256px;
+    /* width: 23.4%; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 450px;
     position: relative;
 }
@@ -227,13 +263,17 @@ main {
 .collections .collections_img_8 {
     background: linear-gradient(0deg,rgba(0, 0, 0, 0.514),rgba(184, 184, 184, 0)), url('./images/desktop/image-fisheye.jpg');
     width: 256px;
+    /* width: 23.4%; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 450px;
     position: relative;
 }
 
 .collections h3 {
     font-family: 'Josefin Sans';
-    font-weight: 250;
+    font-weight: 200;
     max-width: 150px;
     font-size: 1.5rem;
     color: var(--primary-White);
@@ -311,6 +351,10 @@ footer .copyright {
     margin-right: 0;
 }
 
+/* .collections .collections_img:nth-child(4n) {
+    margin-right: 0;
+} */
+
 footer .social ul li:nth-child(4) {
     margin-right: 0;
 }
@@ -346,6 +390,38 @@ footer .social ul li:nth-child(4) {
         margin: 0 auto;
     }
 
+    .collection_header .upper_btn {
+        display: none;
+    }
+
+    .collection_header {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .collection_header h3 {
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .lower_btn_container {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lower_btn_container .lower_btn {
+        font-size: 1rem;
+        padding: 10px;
+        display: block;
+        text-align: center;
+        width: 180px;
+    }
+
+    .collections .collections_img:nth-child(even) {
+        margin-right: 0;
+    }
+
 } 
 
 @media screen and (min-width: 870px) {
@@ -354,6 +430,30 @@ footer .social ul li:nth-child(4) {
     }
 }
 
+@media (min-width: 620px) and (max-width: 703px) {
+    .collections .collections_img {
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media (min-width: 620px) and (max-width: 625px) {
+    
+    .collections .collections_img {
+        margin-bottom: 1px;
+        margin-right: 1px;
+    }
+}
+
+@media (max-width: 619px) {
+    .collections .collections_img {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 620px) {
+
+}
 @media (min-width: 376px) and (max-width: 703px) {
     .navigation_container .logo {
         width: 150px;
@@ -397,6 +497,10 @@ footer .social ul li:nth-child(4) {
         border: 2.5px solid var(--primary-White);
         max-width: 570px;
         padding: 25px;
+    }
+
+    .collection_header h3 {
+        font-weight: 300;
     }
 }
 
@@ -449,10 +553,6 @@ footer .social ul li:nth-child(4) {
 } */
 
 @media (max-width: 1024px) {
-    header {
-        
-    }
-
     .container .info_container {
         position: static;
         display: flex;
@@ -462,7 +562,6 @@ footer .social ul li:nth-child(4) {
     .info_pic img {
         width: 100%;
     }
-    
 
     .inner_info_container {
         position: static;
@@ -481,6 +580,10 @@ footer .social ul li:nth-child(4) {
         text-align: center;
         /* padding-left: 10px;
         padding-right: 10px; */
+    }
+
+    .collections {
+        justify-content: center;
     }
 
 }
@@ -509,8 +612,17 @@ footer .social ul li:nth-child(4) {
         line-height: 1.5rem;
         word-spacing: 2.5px;
     }
+
+    .collections {
+        justify-content: center;
+    }
 }
 
+@media (min-width: 1440px) {
+    .collections .collections_img:nth-child(4n) {
+        margin-right: 0;
+    }
+}
 
 /* for Mobile Menu */
 
