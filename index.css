@@ -320,6 +320,9 @@ main .container {
 
 footer {
     background-color:  var(--primary-Black);
+    position: relative;
+    bottom: 0;
+    left: 0;
 }
 
 footer .container {
