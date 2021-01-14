@@ -36,7 +36,6 @@ header {
 .navigation {
     width: var(--primary-Width);
     margin: 0 auto 80px auto;
-    
 }
 
 header .navigation_container {
@@ -139,6 +138,7 @@ header .navigation_container {
 main {
     margin-bottom: 10rem;
 }
+
 main .container {
     width: var(--primary-Width);
     margin: 0 auto;
@@ -196,17 +196,19 @@ main .container {
 .collections .collections_img {
     margin-bottom: 23.3px;
     margin-right: 23.3px;
+    position: relative;
+    overflow: hidden;
 }
 
 .collections .collections_img_1 {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.514), rgba(184, 184, 184, 0)), url('./images/desktop/image-deep-earth.jpg');
     width: 256px;
-    /* width: 23.4%; */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 450px;
     position: relative;
+    transition: 1s ease;
 }
 
 .collections .collections_img_2 {
@@ -286,15 +288,34 @@ main .container {
     position: relative;
 }
 
+.collections_img .div_overlay {
+    position: relative;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.514),rgba(184, 184, 184, 0));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
 .collections h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 59%;
     font-family: 'Josefin Sans';
     font-weight: 200;
-    max-width: 150px;
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
     color: var(--primary-White);
-    margin: 2rem;
-    position: absolute;
-    bottom: 5px;
+    height: 100%;
+    left: 0;
+    right: 0;
+    padding: 0 75px 40px 30px;
 }
 
 footer {
@@ -382,16 +403,17 @@ footer .copyright {
 
 
 /* with pseudo */
+
 .navigation_links ul li:nth-child(5), footer .footer_links ul li:nth-child(5) {
     margin-right: 0;
 }
 
-/* .collections .collections_img:nth-child(4n) {
-    margin-right: 0;
-} */
-
 footer .social ul li:nth-child(4) {
     margin-right: 0;
+}
+
+.collections_img h3:nth-child(4) {
+    width: 130px;
 }
 
 .navigation_links ul li a::after, footer .footer_links ul li a::after, footer .social ul li::after {
@@ -423,6 +445,19 @@ footer .social ul li:nth-child(4) {
     color: var(--primary-White);
     background-color: var(--primary-Black);
     border: 0;
+}
+
+.collections_img .div_overlay:hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.521);
+}
+
+.collections_img .div_overlay h3:hover {
+    color: var(--primary-Black);
 }
 
 
@@ -661,6 +696,22 @@ footer .social ul li:nth-child(4) {
         background-size: cover;
         height: 200px;
         position: relative;
+    }
+
+    .collections h3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 45%;
+        font-family: 'Josefin Sans';
+        font-weight: 200;
+        font-size: clamp(40px, 5vw, 1.8rem);
+        color: var(--primary-White);
+        height: 100%;
+        left: 0;
+        right: 0;
+        padding: 0 255px 30px 30px;
     }
 }
 

@@ -16,7 +16,15 @@
       <div class="overlay_container">
         <div class="upper">
           <img class="logo" src="./images/logo.svg" alt="">
-          <button class="close_btn" onclick="closeNav();"><img src="./images/icon-close.svg" alt=""></button>
+          <button 
+          class="close_btn" 
+          onclick="closeNav();" 
+          role="button"
+          aria-label="Opening the overlay menu"
+          title="alternative for other users"
+          value="abcd">
+            <img src="./images/icon-close.svg" alt="">
+          </button>
         </div>
         <div class="lower">
           <ul>
@@ -52,7 +60,13 @@
               <li><a href="">Support</a></li>
             </ul>
           </div>
-          <button onclick="openNav();">
+          <button 
+          onclick="openNav();"
+          role="button"
+          aria-label="Exit overlay menu"
+          title="For exiting the overlay menu"
+          value=""
+          >
             <img src="./images/icon-hamburger.svg" alt="">
           </button>
         </div>
@@ -85,28 +99,28 @@
         </div>
         <div class="collections">
           <div class="collections_img_1 collections_img">
-            <h3>DEEP EARTH</h3>
+            <div class="div_overlay"><h3>DEEP EARTH</h3></div>
           </div>
           <div class="collections_img_2 collections_img">
-            <h3>NIGHT ARCADE</h3>
+            <div class="div_overlay"><h3>NIGHT ARCADE</h3></div>
           </div>
           <div class="collections_img_3 collections_img">
-            <h3>SOCCER TEAM VR</h3>
+            <div class="div_overlay"><h3>SOCCER TEAM VR</h3></div>
           </div>
-          <div class="collections_img_4 collections_img">
-            <h3>THE GRID</h3>
+          <div class="collections_img_4 collections_img small">
+            <div class="div_overlay"><h3>THE GRID</h3></div>
           </div>
           <div class="collections_img_5 collections_img">
-            <h3>FROM UP ABOVE VR</h3>
+            <div class="div_overlay"><h3>FROM UP ABOVE VR</h3></div>
           </div>
           <div class="collections_img_6 collections_img">
-            <h3>POCKET BOREALIS</h3>
+            <div class="div_overlay"><h3>POCKET BOREALIS</h3></div>
           </div>
           <div class="collections_img_7 collections_img">
-            <h3>THE CURIOSITY</h3>
+            <div class="div_overlay"><h3>THE CURIOSITY</h3></div>
           </div>
           <div class="collections_img_8 collections_img">
-            <h3>MAKE IT FISHEYE</h3>
+            <div class="div_overlay"><h3>MAKE FISHEYE</h3></div>
           </div>
         </div>
         <div class="lower_btn_container">
